@@ -6,13 +6,14 @@ Example on how to share components when migrating from Create React App to NextJ
 
 ## How it works?
 
-With the help of [react-app-rewire-alias](https://github.com/oklas/react-app-rewire-alias) we alias the /next folder of NextJS to Create React App. Therefore we can reuse the same components while migrating from one to another.
+With the help of [react-app-rewire-alias](https://github.com/oklas/react-app-rewire-alias) we alias the /next-js folder of NextJS to Create React App. Therefore we can reuse the same components while migrating from one to another.
 
-config-override.js:
+config-override.js for create-react-app:
+
 ```bash
 module.exports = function override(config) {
   return alias({
-    next: '../next',
+    'next-js': '../next-js',
   })(config);
 };
 ```
@@ -22,21 +23,25 @@ module.exports = function override(config) {
 To run Create React App the development server (.env sets port 3001):
 
 ```bash
-cd cra
+cd create-react-app
+npm install
 npm run start
 # or
+yarn
 yarn dev
 ```
 
 To run the NextJS development server (by default port 3000):
 
 ```bash
-cd next
+cd next-js
+npm install
 npm run dev
 # or
+yarn
 yarn dev
 ```
 
 ## Hot reloading
 
-While changing next/src/components/Component.js to "hola mikko" you can see hot reloading in both Create React App and NextJS applications. Ole!
+While changing next-js/src/components/Component.js to "hola mikko" you can see hot reloading in both Create React App and NextJS applications. Ole!
