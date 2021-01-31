@@ -1,8 +1,9 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
-import Component from '../components/Component';
+import Home from '../components/Home';
 
-export default function Home() {
+export default function Index() {
   return (
     <div className={styles.container}>
       <Head>
@@ -11,7 +12,21 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Component />
+        <h1>Next JS</h1>
+        <ul>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/cats">Cats</Link>
+          </li>
+          <li>
+            <Link href="/dogs">Dogs</Link>
+          </li>
+        </ul>
+
+        <hr />
+        <Home />
       </main>
     </div>
   );

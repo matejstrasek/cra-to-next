@@ -60,8 +60,30 @@ yarn dev
 
 ## Routing example
 
-[TODO] Rewrite non-existing routes from NextJS to Create React App example.
+Example with two-folder-parallel-structure shows a case when we migrated only home page while /cats and /dogs routes are a rewrite to create-react-app.
 
-## Hot reloading
+NextJS next.config.js in the root handles rewrites of the non-migrated routes to Create React App.
+```bash
+// next.config.js
 
-While changing next-js/src/components/Component.js to "hola mikko" you can see hot reloading in both Create React App and NextJS applications. Ole!
+module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: '/:path*',
+        destination: '/:path*',
+      },
+      {
+        source: '/:path*',
+        destination: `http://localhost:3001/:path*`, // Rewrite non-migrated routes to Create React App
+      },
+    ];
+  },
+};
+```
+
+Keep in mind is no problem to handle case like this also in production.
+
+## Fun Fact: Hot Reloading
+
+While changing component that both of the applications are using (one-folder-with-second-inside-structure/src/components/Component.js) to "hola mikko" you can see hot reloading in both Create React App and NextJS applications at the same time. Ole!
