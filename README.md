@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Idea on how to easier migrate parts of Create React App to NextJS step by step while being with both in production in the meantime.
 
-## Problem
+## Problem
 
 We want to share components between two projects and being able to run both of them at the same time. Problem occurs when we want to import code from outside the src of the current project.
 
