@@ -1,0 +1,25 @@
+{
+  "name": "cra-to-next",
+  "version": "1.0.0",
+  "description": "Migrate parts of Create React App to NextJS step by step while being with both in production.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matejstrasek/cra-to-next.git"
+  },
+  "keywords": [
+    "NextJS",
+    "Create",
+    "React",
+    "App"
+  ],
+  "author": "Matej Strasek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matejstrasek/cra-to-next/issues"
+  },
+  "homepage": "https://github.com/matejstrasek/cra-to-next#readme"
+}
