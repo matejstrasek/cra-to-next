@@ -58,6 +58,10 @@ yarn
 yarn dev
 ```
 
+## Routing example
+
+[TODO] Rewrite non-existing routes from NextJS to Create React App example.
+
 ## Hot reloading
 
 While changing next-js/src/components/Component.js to "hola mikko" you can see hot reloading in both Create React App and NextJS applications. Ole!
