@@ -1,8 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [Next.js](https://nextjs.org/) with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## What is this?
+## Motivation
 
-Example on how to share components when migrating from Create React App to NextJS with being able to run both of them at the same time.
+Idea on how to easier migrate parts of Create React App to NextJS step by step while being with both in production in the meantime.
+
+## Problem
+
+We want to share components between two projects and being able to run both of them at the same time. Problem occurs when we want to import code from outside the src of the current project.
+
+```bash
+Module not found: You attempted to import ../../components/Component which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
+```
 
 ## How it works?
 
@@ -18,7 +26,15 @@ module.exports = function override(config) {
 };
 ```
 
+Note: In one-folder example we alias the /components folder.
+
+## Folder structure
+
+Repository contains two different approaches: two-folder-parallel-structure with Create React App and NextJS in parallel and one-folder-with-second-inside-structure with NextJS as primary and Create React App as secondary folder.
+
 ## Getting Started
+
+Depending on the folder structure go into desired folder: two-folder-parallel-structure or one-folder-with-second-inside-structure.
 
 To run Create React App the development server (.env sets port 3001):
 
